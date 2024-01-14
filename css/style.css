@@ -1,0 +1,531 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+body {
+    background-color: #191A1D;
+}
+
+main {
+    background-image: url(https://st2.depositphotos.com/2931363/9695/i/450/depositphotos_96952048-stock-photo-young-handsome-man-in-barbershop.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: -84px;
+    backdrop-filter: brightness(70%) contrast(1.2) saturate(1.5);
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+
+    background-image: url(https://st2.depositphotos.com/2931363/9695/i/450/depositphotos_96952048-stock-photo-young-handsome-man-in-barbershop.jpg); 
+    background-repeat: no-repeat;
+    background-size: 100%;
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    width: 80px;
+    position: relative;
+    left: 10px;
+    filter: invert(1);
+}
+
+.logo p {
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+/* NavBar */
+.navbar {
+    display: flex;
+    gap: 40px;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.navbar a { text-decoration: none; }
+
+.redes-sociais img {
+    width: 40px;
+}
+
+/* Inicio */
+#inicio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+#inicio h1 {
+    font-size: 2em;
+}
+
+.barbearia-nome{
+    font-size: 2.2em;
+}
+
+.btn-servicos-inicio {
+    margin-top: 20px;
+    padding: 20px 60px;
+    background-color: #EFB43A;
+    color: black;
+    text-decoration: none;
+    font-size: 1.5em;
+    outline: 3px solid black;
+    outline-offset: -7px;
+    transition: all 0.5s ease;
+}
+
+.btn-servicos-inicio:hover {
+    color: white;
+}
+
+/* Quem Somos */
+#quem-somos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 140vh;
+    padding: 20px;
+    background-color: #F5F5F5;
+}
+
+#quem-somos h2 {
+    color: #b1733e;
+    font-size: 4em;
+}
+
+.sobre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    height: 100vh;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.images-sobre {
+    width: 50%;
+}
+
+.images-sobre img:nth-child(1){
+    width: 220px;
+
+    position: relative;
+    left: 150px;
+}
+.images-sobre img:nth-child(2){
+    width: 220px;
+    
+    position: relative;
+    top: 25vh;
+    left: 150px;
+}
+.images-sobre img:nth-child(3){
+    width: 220px;
+
+    position: relative;
+    left: 150px;
+}
+
+.images-sobre img:nth-child(4) {
+    width: 220px;
+    position: relative;
+    right: 300px;
+    bottom: 24.5vh;
+}
+
+.text-sobre {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    gap: 20px;
+}
+
+.text-sobre p {
+    color: black;
+    max-width: 700px;
+    font-size: 1.2em;
+    line-height: 1.1em;
+}
+
+/* Serviços */
+#servicos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+    
+    background-image: url(https://img.freepik.com/vetores-premium/mao-desenhada-barbeiro-e-salao-padrao-sem-costura-no-fundo-do-quadro-negro_698782-589.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.icon-services {
+    position: relative;
+    top: 50px;
+    background-color: #191A1D;
+    border-radius: 50%;
+}
+
+.icon-services img {
+    width: 70px;
+    transform: scale(1.1);
+    filter: invert(1);
+
+}
+
+.servicos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 65vh;
+    padding: 20px;
+    background-color: #191A1D;
+    outline: 1px solid;
+    outline-offset: -10px;
+}
+
+.barba-cabelo {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.barba-cabelo h2 {
+    font-size: 2em;
+
+    position: relative;
+    top: 15px;
+}
+
+.all-services {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    gap: 30px;
+    height: 20vh;
+    margin-bottom: 80px;
+}
+
+.servicos p {
+    font-size: 1.3em;
+    text-align: left;
+    margin-bottom: 12px;
+    margin-top: 5px;
+}
+
+.barba, .cabelo {
+    width: 50%;
+}
+
+.barba div, .cabelo div {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dotted #EFB43A;
+}
+
+#servicos .barra-vertical {
+    width: 2px;
+    height: 38vh;
+    background-color: #f5f5f5;
+    position: relative;
+    bottom: 20px;
+}
+
+.btn-agendar {
+    position: relative;
+    bottom: 35px;
+
+    padding: 15px 50px;
+    background-color: #EFB43A;
+    color: black;
+    text-decoration: none;
+    font-size: 1.5em;
+    outline: 3px solid black;
+    outline-offset: -7px;
+    transition: all 0.5s ease;
+}
+
+.btn-agendar:hover {
+    color: white;
+}
+
+/* Galeria */
+#galeria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 120vh;
+    padding: 20px;
+    background-color: #F5F5F5;
+}
+
+#galeria h2 {
+    color: #b1733e;
+    font-size: 5em;
+    margin-bottom: 30px;
+}
+
+#galeria img {
+    width: 350px;
+    height: 250px;
+    border-radius: 3px;
+}
+
+.imgs-galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+/* Contato */
+#contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 120vh;
+    padding: 20px;
+    background-color: #eebe5f;
+}
+
+#contato h2 {
+    color: #EFB43A;
+    font-size: 2em;
+    background-color: #191A1D;
+    padding: 10px 30px;
+    border-radius: 10px;
+
+    position: relative;
+    top: 90px;
+}
+
+.contato {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 70%;
+    height: 90vh;
+    padding: 20px;
+    outline: 1px solid;
+    outline-offset: -10px;
+    background-color: #191A1D;
+    margin: auto;
+}
+
+.informacoes-barbearia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    width: 50%;
+}
+
+.informacoes-barbearia h3 {
+    font-size: 1.6em;
+    margin:  0 0 8px 0;
+}
+
+.informacoes-barbearia p {
+    font-size: 1.2em;
+}
+
+#contato .barra-vertical {
+    width: 2px;
+    height: 70vh;
+    background-color: #f5f5f5;
+    position: relative;
+    margin: 20px;
+}
+
+.formulario-contato {
+    width: 50%;
+    padding: 10px;
+}
+
+.formulario-contato form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario-contato input, select, option, .digite {
+    padding: 10px;
+    margin-bottom: 10px;
+    color: black;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    font-size: 1.05em;
+
+}
+
+.formulario-contato select option:checked {
+    background-color: rgba(53, 39, 11, 0.26);
+}
+
+.nome-telefone {
+    display: flex;
+    gap: 5px;
+}
+
+.nome-telefone input{
+    width: 50%;
+}
+
+.formulario-contato label {
+    font-size: 1.3em;
+}
+
+.digite {
+    height: 20vh;
+    resize: none;
+}
+
+.btn-agendar-contato {
+    width: 30%;
+    padding: 15px 30px;
+    border-radius: 3px;
+    background-color: #EFB43A;
+    outline: 2px solid black;
+    outline-offset: -4px;
+    border: none;
+    font-size: 1.1em;
+    color: black;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.btn-agendar-contato:hover {
+    color: white;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+    padding: 10px;
+    background-color: #F5F5F5;
+    margin-bottom: 28vh;
+}
+
+footer p {
+    font-size: 1.4em;
+    color: #b1733e;
+}
+
+.informacoes-site {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 28vh;
+    text-align: left;
+    padding: 15px;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    border-radius: 10px 10px 0 0;
+    backdrop-filter: blur(10px);
+    background-color: #00000052;
+}
+
+.text-info-site {
+    width: 70vw;
+}
+
+.informacoes-site h2 {
+    font-size: 1.5em;
+    margin: 10px 0 10px 0;
+}
+
+.informacoes-site p{
+    font-size: 1.4em;
+    margin: 0 0 10px 0;
+}
+
+.nome-projeto {
+    font-size: 1.5em;
+    text-decoration: underline;
+}
+
+.btn-linguagens {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    width: 25vw;
+    gap: 10px;
+}
+
+.btn-github {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15vw;
+    padding: 5px;
+    background-color: #f5f5f5;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-github img {
+    width: 60px;
+}
+
+.linguagens-utilizadas {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+}
+
+.linguagens-utilizadas img {
+    width: 55px;
+}
+
+.mini-barra-vertical {
+    width: 1px;
+    height: 10vh;
+    margin: 0 5px 0 0;
+    background-color: #1D9CCA;
+}
