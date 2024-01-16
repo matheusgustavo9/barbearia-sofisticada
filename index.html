@@ -17,19 +17,19 @@
         </div>
         <nav class="navbar">
             <ul>
-                <a href="#">
+                <a href="#inicio">
                     <li>Inicio</li>
                 </a>
-                <a href="#">
+                <a href="#quem-somos">
                     <li>Quem Somos</li>
                 </a>
-                <a href="#">
+                <a href="#servicos">
                     <li>Serviços</li>
                 </a>
-                <a href="#">
+                <a href="#galeria">
                     <li>Galeria</li>
                 </a>
-                <a href="#">
+                <a href="#contato">
                     <li>Contato</li>
                 </a>
             </ul>
@@ -145,7 +145,7 @@
 
         <section id="contato">
             <h2>Contato</h2>
-            <div class="contato">
+            <div class="contato" id="contato-container">
                 <div class="informacoes-barbearia">
                     <div class="informacoes-de-contato">
                         <h3>Meios de Contato:</h3>
@@ -168,36 +168,42 @@
                 <div class="formulario-contato">
                     <form action="">
                         <div class="nome-telefone">
-                            <input type="text" placeholder="Nome">
-                            <input type="number"  placeholder="Telefone">
+                            <input type="text" placeholder="Nome" id="nome" required>
+                            <input type="tel"  placeholder="Telefone com DDD" id="telefone" maxlength="17" oninput="formatarNumero(this)" required>
                         </div>
 
-                        <input type="email" placeholder="Email">
+                        <input type="email" placeholder="Email" required>
+                        <input type="datetime-local">
 
-                        <label for="">Barba</label>
+                        <label for="barba">Barba</label>
                         <select name="barba" id="barba">
-                            <option value="">Nada</option>
-                            <option value="">Tradicional</option>
-                            <option value="">Desenhada</option>
-                            <option value="">Só Máquina</option>
+                            <option value="nada">Nada</option>
+                            <option value="tradicional">Tradicional</option>
+                            <option value="desenhada">Desenhada</option>
+                            <option value="maquina">Só Máquina</option>
                         </select>
                         
-                        <label for="">Cabelo</label>
+                        <label for="cabelo">Cabelo</label>
                         <select name="cabelo" id="cabelo">
-                            <option value="">Nada</option>
-                            <option value="">Corte com Máquina</option>
-                            <option value="">Corte com Tesoura</option>
-                            <option value="">Pezinho</option>
-                            <option value="">Tintura</option>
-                            <option value="">Hidratação</option>
+                            <option value="nada">Nada</option>
+                            <option value="maquina">Corte com Máquina</option>
+                            <option value="tesoura">Corte com Tesoura</option>
+                            <option value="pezinho">Pezinho</option>
+                            <option value="tintura">Tintura</option>
+                            <option value="hidratacao">Hidratação</option>
                         </select>
 
                         <textarea class="digite" placeholder="Digite sua mensagem aqui..."></textarea>
 
-                        <button class="btn-agendar-contato">
-                            Agendar
-                        </button>
+                        <button class="btn-agendar-contato" onclick="agendarCorte()">Agendar</button>
                     </form>
+                </div>
+
+            </div>
+
+            <div id="agendar-corte">
+                <div class="agendado">
+                    <p>Seu corte foi agendado Matheus</p>
                 </div>
             </div>
         </section>
@@ -205,13 +211,13 @@
     </main>
 
     <footer>
-        <p>Direitos © 2023, matheusgustavo.com.br</p>
+        <p>Copyright © 2023 matheusgustavo9.github.io/matheusgustavo Todos os direitos reservados.</p>
     </footer>
 
     <div class="informacoes-site">
         <div class="text-info-site">
-            <h2><span class="nome-projeto">Layout Barbearia</span> - 00/00/2023</h2>
-            <p>Desenvolvi esse site logo depois de concluir um curso do Senai chamado "Introdução a programação Front-End", apliquei imediatamente os conhecimentos em HTML, CSS e JavaScript adquiridos, marcando o início da minha jornada no Front-End. Na criação desse site usei algumas referencias que olhei na internet. Esse site ainda não possui design responsivos estou estudando a fundo para deixar esse site responsivo.
+            <h2><span class="nome-projeto">Layout Barbearia</span> - 01/11/2023</h2>
+            <p>Desenvolvi este site logo após concluir o curso "Introdução à Programação Front-End" no Senai. Apliquei imediatamente os conhecimentos em HTML, CSS e JavaScript, marcando assim o início da minha jornada no Front-End. Utilizei referências encontradas na internet para a criação do site.
             </p>
         </div>
 
@@ -234,5 +240,7 @@
             </div>
         </div>
     </div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
