@@ -167,28 +167,30 @@ header::before {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 140vh;
-    padding: 20px;
-    background-color: #F5F5F5;
+    justify-content: center;
+    height: 120vh;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
 }
 
 #quem-somos h2 {
-    color: #111;
-    font-size: 3.5em;
+    color: #EFB43A;
+    font-size: 3.2em;
+    font-family: "Roboto Condensed";
     text-align: start;
     position: relative;
-    margin-left: 10px;
+    margin-left: 15px;
 }
 
 #quem-somos h2::before{
     content: "";
-    width: 100px;
-    height: auto;
-    background: url(https://png.pngtree.com/png-vector/20220818/ourmid/pngtree-barbershop-pole-decoration-png-image_6115703.png) no-repeat;
-    background-size: 50%;
+    width: 10px;
+    height: 100%;
+    background-color: #EFB43A; 
     position: absolute;
-    left: -10px;
-    top: 5px;
+    left: -15px;
+    top: 0;
+    border-radius: 5px 50px 5px 50px;
 }
 
 .sobre {
@@ -198,37 +200,14 @@ header::before {
     width: 85%;
     height: 100vh;
     gap: 40px;
-    margin-top: 50px;
 }
 
 .images-sobre {
     width: 40%;
 }
 
-.images-sobre img:nth-child(1){
-    width: 170px;
-
-    /* position: relative;
-    left: 150px; */
-}
-.images-sobre img:nth-child(2){
-    width: 170px;
-    
-    /* position: relative;
-    top: 25vh;
-    left: 150px; */
-}
-.images-sobre img:nth-child(3){
-    width: 170px;
-
-    /* position: relative;
-    left: 150px; */
-}
-.images-sobre img:nth-child(4) {
-    width: 170px;
-    /* position: relative;
-    right: 300px;
-    bottom: 24.5vh; */
+.images-sobre img {
+    width: 200px;
 }
 
 .text-sobre {
@@ -242,7 +221,8 @@ header::before {
 .text-sobre p {
     color: black;
     max-width: 700px;
-    font-size: 1.2em;
+    font-size: 1.15em;
+    font-family: "Outfit";
     line-height: 1.1em;
 }
 
