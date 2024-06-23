@@ -197,17 +197,17 @@ header::before {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 85%;
+    width: 90%;
     height: 100vh;
-    gap: 40px;
+    gap: 50px;
 }
 
-.images-sobre {
-    width: 40%;
+.img-sobre {
+    width: 50%;
 }
 
-.images-sobre img {
-    width: 200px;
+.img-sobre img {
+    max-width: 600px;
 }
 
 .text-sobre {
@@ -235,23 +235,27 @@ header::before {
     height: 100vh;
     padding: 20px;
     
-    background-image: url(https://img.freepik.com/vetores-premium/mao-desenhada-barbeiro-e-salao-padrao-sem-costura-no-fundo-do-quadro-negro_698782-589.jpg);
-    background-size: 100%;
+    background: url(../img/fundo1.jpg);
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
 .icon-services {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     top: 50px;
     background-color: #191A1D;
     border-radius: 50%;
+    width: 85px;
+    height: 85px;
 }
 
 .icon-services img {
     width: 70px;
     transform: scale(1.1);
     filter: invert(1);
-
 }
 
 .servicos {
@@ -263,7 +267,7 @@ header::before {
     height: 65vh;
     padding: 20px;
     background-color: #191A1D;
-    outline: 1px solid;
+    outline: 1px solid #EFB43A;
     outline-offset: -10px;
 }
 
@@ -276,9 +280,21 @@ header::before {
 
 .barba-cabelo h2 {
     font-size: 2em;
+    font-family: "Roboto Condensed";
+    font-weight: 600;
 
     position: relative;
     top: 15px;
+}
+
+.barba-cabelo h2::after{
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #EFB43A;
+    position: absolute;
 }
 
 .all-services {
@@ -310,7 +326,7 @@ header::before {
 #servicos .barra-vertical {
     width: 2px;
     height: 38vh;
-    background-color: #f5f5f5;
+    background-color: #EFB43A;
     position: relative;
     bottom: 20px;
 }
@@ -319,18 +335,24 @@ header::before {
     position: relative;
     bottom: 35px;
 
-    padding: 15px 50px;
+    margin-top: 20px;
+    padding: 13px 40px;
     background-color: #EFB43A;
-    color: black;
+    color: #111;
     text-decoration: none;
-    font-size: 1.5em;
-    outline: 3px solid black;
-    outline-offset: -7px;
-    transition: all 0.5s ease;
+    font-size: 1.4em;
+    font-family: "Outfit";
+    font-weight: 400;
+    letter-spacing: 2px;
+    outline: 2px solid #111;
+    outline-offset: -5px;
+    transition: all 0.3s ease-in-out;
 }
 
 .btn-agendar:hover {
-    color: white;
+    color: #EFB43A;
+    outline-color: #EFB43A;
+    background-color: #111;
 }
 
 /* Galeria */
