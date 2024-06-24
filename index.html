@@ -12,6 +12,8 @@
 </head>
 <body>
 
+    <!-- ! OTIMIZAR O SITE -->
+
     <header>
         <div class="logo">
             <img src="./src/img/logo.png" alt="Logo">
@@ -127,24 +129,24 @@
                     </div>
                 </div>
             </div>
-            <a href="#" class="btn-agendar">Agendar</a>
+            <a href="#contato" class="btn-agendar">Agendar</a>
         </section>
 
         <section id="galeria">
             <h2>Galeria</h2>
             <div class="imgs-galeria">
-                <img src="https://img.freepik.com/fotos-gratis/cliente-fazendo-o-corte-de-cabelo-em-um-salao-de-barbearia_1303-20861.jpg" alt="">
-                <img src="https://guiafranquiasdesucesso.com/wp-content/uploads/2016/08/franquia-barbearia.jpg" alt="">
-                <img src="https://i.pinimg.com/736x/34/88/75/3488753b6779138a48f806000327d718.jpg" alt="">
-                <img src="https://img.freepik.com/fotos-gratis/jovem-na-barbearia-aparando-cabelo_1303-26254.jpg?size=626&ext=jpg&ga=GA1.1.1546980028.1704153600&semt=sph" alt="">
-                <img src="https://donbarba.com/wp-content/uploads/Hidrata%C3%A7%C3%A3o-capilar.jpg" alt="">
-                <img src="https://i.pinimg.com/originals/2e/e0/dd/2ee0dd62f28e6da2aa5e6076d183eb8d.jpg" alt="">
+                <img src="./src/img/cortando-barba2.jpg" alt="Imagem 2 Cortando Barba">
+                <img src="./src/img/cortando-cabelo1.jpg" alt="Imagem 1 Cortando Cabelo">
+                <img src="./src/img/ferramentas-barbearia.jpg" alt="Imagem Ferramentas Barbearia">
+                <img src="./src/img/cortando-barba3.jpg" alt="Imagem 3 Cortando Barba">
+                <img src="./src/img/cortando-cabelo2.jpg" alt="Imagem 2 Cortando Cabelo">
+                <img src="./src/img/cortando-barba1.jpg" alt="Imagem 1 Cortando Barba">
             </div>
         </section>
 
         <section id="contato">
             <h2>Contato</h2>
-            <div class="contato" id="contato-container">
+            <div class="contato-container" id="contato-container">
                 <div class="informacoes-barbearia">
                     <div class="informacoes-de-contato">
                         <h3>Meios de Contato:</h3>
@@ -172,7 +174,7 @@
                         </div>
 
                         <input type="email" placeholder="Email" required>
-                        <input type="datetime-local">
+                        <input type="datetime-local" required>
 
                         <label for="barba">Barba</label>
                         <select name="barba" id="barba">
@@ -200,17 +202,17 @@
 
             </div>
 
-            <div id="agendar-corte">
+            <!-- <div id="agendar-corte">
                 <div class="agendado">
                     <p>Seu corte foi agendado Matheus</p>
                 </div>
-            </div>
+            </div> -->
         </section>
 
     </main>
 
     <footer>
-        <p>Copyright © 2023 matheusgustavo9.github.io/matheusgustavo Todos os direitos reservados.</p>
+        <p>Copyright © 2023 <a href="https://matheusgustavo9.github.io/matheusgustavo" target="_blank">matheus gustavo</a> Todos os direitos reservados.</p>
     </footer>
 
     <!-- <div class="informacoes-site">
@@ -240,6 +242,9 @@
         </div>
     </div> -->
 
-    <script src="js/script.js"></script>
+    <div id="tela-carregamento">
+        <div id="carregando"></div>
+    </div>
+    <script src="./src/js/script.js"></script>
 </body>
 </html>
