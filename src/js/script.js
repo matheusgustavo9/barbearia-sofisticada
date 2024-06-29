@@ -1,75 +1,3 @@
-//? Telefone
-// function formatarNumero() {
-//     let input = document.getElementById('telefone');
-//     let numero = input.value.replace(/\D/g, '');
-
-//     if (numero.length > 2) {
-//         input.value = '(' + numero.substring(0, 2) + ') ' + numero.substring(2, 7);
-
-//         if (numero.length > 7) {
-//             input.value += ' - ' + numero.substring(7, 11);
-//         }
-//     }
-// }
-
-//? Agendado
-// function agendarCorte() {
-//     let nome = document.getElementById('nome').value;
-//     const contato = document.getElementById("contato")
-
-//     if (nome) {
-//         let agendado = document.createElement("div");
-//         agendado.className = "agendado";
-
-//         let paragrafo = document.createElement("p");
-//         paragrafo.textContent = `Seu corte foi agendado ${nome}`;
-
-//         agendado.appendChild(paragrafo);
-
-//         contato.appendChild(agendado);
-//     }
-// }
-
-// function agendarCorte() {
-//     let nome = document.getElementById('nome').value;
-//     const corteAgendado = document.getElementById("agendar-corte");
-
-//     if (nome) {
-//?         Cria um novo elemento div para substituir o conteúdo
-//         let textoAgendado = document.createElement("div");
-//         textoAgendado.className = "agendado";
-
-//         let paragrafo = document.createElement("p");
-//         paragrafo.textContent = `Seu corte foi agendado ${nome}`;
-
-//         textoAgendado.appendChild(paragrafo);
-
-//         corteAgendado.innerHTML = '';
-//         corteAgendado.appendChild(textoAgendado);
-//     }
-// }
-
-// const corpo = document.querySelector('body');
-// const telaCarregamento = document.getElementById('tela-carregamento');
-// const carregando = document.getElementById('carregando');
-// const header = document.querySelector("header")
-// const main = document.querySelector("main")
-// const footer = document.querySelector("footer")
-
-// const telaDeCarregamentoAcabou = setTimeout(function() {
-//     corpo.style.overflow = "auto";
-//     telaCarregamento.style.display = "none";
-//     carregando.style.display = 'none';
-
-//     header.style.display = 'flex';
-//     main.style.display = 'block';
-//     footer.style.display = 'flex';
-
-//     clearTimeout(telaDeCarregamentoAcabou)
-// }, 2000);
-
-
-const corpoDoDocumento = document.querySelector('body');
 const telaDeCarregamento = document.getElementById('tela-carregamento');
 const carregandoElemento = document.getElementById('carregando');
 const cabecalho = document.querySelector("header")
@@ -77,8 +5,7 @@ const conteudoPrincipal = document.querySelector("main")
 const rodape = document.querySelector("footer")
 
 window.addEventListener('load', function() {
-    // Remover a tela de carregamento e mostrar o conteúdo
-    corpoDoDocumento.style.overflow = "auto";
+    document.body.style.overflow = "auto";
     telaDeCarregamento.style.display = "none";
     carregandoElemento.style.display = 'none';
 
@@ -86,3 +13,54 @@ window.addEventListener('load', function() {
     conteudoPrincipal.style.display = 'block';
     rodape.style.display = 'flex';
 });
+
+const agendarCorte = document.querySelector('#agendar-corte');
+const textoAgendado = document.querySelector('#texto-agendado')
+
+function agendar() {
+    const nomeInput = document.querySelector('#nome');
+    const telefoneInput = document.querySelector('#telefone');
+    const dataHoraInput = document.querySelector('#data-hora');
+    
+    const nome = nomeInput.value;
+    const telefone = telefoneInput.value;
+    const dataHoraValor = dataHoraInput.value;
+    
+    const dataHora = new Date(dataHoraValor);
+    const dia = dataHora.getDate().toString().padStart(2, '0');
+    const mes = (dataHora.getMonth() + 1).toString().padStart(2, '0');
+    const ano = dataHora.getFullYear();
+    const hora = dataHora.getHours().toString().padStart(2, '0');
+    const minutos = dataHora.getMinutes().toString().padStart(2, '0');
+    
+    if(nome !== '' && telefone !== '' && dataHoraValor !== '') {
+        agendarCorte.style.display = 'flex';
+        textoAgendado.innerHTML = `Obrigado por agendar conosco, ${nome}! Estamos prontos para deixar seu visual incrível. Até logo! <br> <br> Seu corte foi agendado para o dia ${dia}/${mes}/${ano} as ${hora}:${minutos}`
+        
+        setTimeout(() => {
+            agendarCorte.style.display = 'none';
+            nomeInput.value = '';
+            telefoneInput.value = '';
+            dataHoraInput.value = '';
+            document.querySelector('#email').value = ''
+            document.querySelector('#barba').value = '';
+            document.querySelector('#cabelo').value = '';
+            document.querySelector('.digite').value = '';
+        }, 5000);
+    }
+}
+
+const voltarAoTopo = document.querySelector(".voltar-ao-topo");
+window.addEventListener('scroll', function() {
+    var scrollPosition = window.scrollY;
+    var button = document.querySelector('.voltar-ao-topo');
+
+    if (scrollPosition >= 200) {
+        button.classList.add('show');
+    } else {
+        button.classList.remove('show');
+    }
+});
+voltarAoTopo.addEventListener('click', () => {
+    window.scrollTo({top: 0})
+})

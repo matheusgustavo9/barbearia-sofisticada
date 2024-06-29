@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
 
@@ -150,12 +152,12 @@
                 <div class="informacoes-barbearia">
                     <div class="informacoes-de-contato">
                         <h3>Meios de Contato:</h3>
-                        <p>(00) 4002 - 8922</p>
+                        <p>(11) 99999-8888</p>
                         <p>barbeariasofisticada@gmail.com</p>
                     </div>
                     <div class="endereco-da-barbearia">
                         <h3>Endereço</h3>
-                        <p>Rua Lorem ipsum dolor sit, 192 <br> São Paulo, SP40028-922</p>
+                        <p>Rua Augusta, 1344 <br> São Paulo, SP 01305-000</p>
                     </div>
                     <div class="horaria-de-atendimento">
                         <h3>Horário de atendimento:</h3>
@@ -167,18 +169,18 @@
                 <div class="barra-vertical"></div>
                 
                 <div class="formulario-contato">
-                    <form action="">
+                    <form action="" onsubmit="return false;">
                         <div class="nome-telefone">
-                            <input type="text" placeholder="Nome" id="nome" required>
-                            <input type="tel"  placeholder="Telefone com DDD" id="telefone" maxlength="17" oninput="formatarNumero(this)" required>
+                            <input type="text" placeholder="Nome" id="nome" required autocomplete="off">
+                            <input type="tel"  placeholder="Telefone com DDD" id="telefone" maxlength="17" required autocomplete="off">
                         </div>
 
-                        <input type="email" placeholder="Email" required>
-                        <input type="datetime-local" required>
+                        <input type="email" placeholder="Email" autocomplete="off" id="email">
+                        <input type="datetime-local" required id="data-hora">
 
                         <label for="barba">Barba</label>
                         <select name="barba" id="barba">
-                            <option value="nada">Nada</option>
+                            <option value="">Nada</option>
                             <option value="tradicional">Tradicional</option>
                             <option value="desenhada">Desenhada</option>
                             <option value="maquina">Só Máquina</option>
@@ -186,7 +188,7 @@
                         
                         <label for="cabelo">Cabelo</label>
                         <select name="cabelo" id="cabelo">
-                            <option value="nada">Nada</option>
+                            <option value="">Nada</option>
                             <option value="maquina">Corte com Máquina</option>
                             <option value="tesoura">Corte com Tesoura</option>
                             <option value="pezinho">Pezinho</option>
@@ -196,17 +198,15 @@
 
                         <textarea class="digite" placeholder="Digite sua mensagem aqui..."></textarea>
 
-                        <button class="btn-agendar-contato" onclick="agendarCorte()">Agendar</button>
+                        <button class="btn-agendar-contato" onclick="agendar()">Agendar</button>
+
+                        <div id="agendar-corte">
+                            <p id="texto-agendado"></p>
+                        </div>
                     </form>
                 </div>
 
             </div>
-
-            <!-- <div id="agendar-corte">
-                <div class="agendado">
-                    <p>Seu corte foi agendado Matheus</p>
-                </div>
-            </div> -->
         </section>
 
     </main>
@@ -241,6 +241,10 @@
             </div>
         </div>
     </div> -->
+
+    <div class="voltar-ao-topo">
+        <button id="return" class="bi bi-chevron-double-up"></button>
+    </div>
 
     <div id="tela-carregamento">
         <div id="carregando"></div>
