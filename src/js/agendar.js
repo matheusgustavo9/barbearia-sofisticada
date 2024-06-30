@@ -1,19 +1,3 @@
-const telaDeCarregamento = document.getElementById('tela-carregamento');
-const carregandoElemento = document.getElementById('carregando');
-const cabecalho = document.querySelector("header")
-const conteudoPrincipal = document.querySelector("main")
-const rodape = document.querySelector("footer")
-
-window.addEventListener('load', function() {
-    document.body.style.overflow = "auto";
-    telaDeCarregamento.style.display = "none";
-    carregandoElemento.style.display = 'none';
-
-    cabecalho.style.display = 'flex';
-    conteudoPrincipal.style.display = 'block';
-    rodape.style.display = 'flex';
-});
-
 const agendarCorte = document.querySelector('#agendar-corte');
 const textoAgendado = document.querySelector('#texto-agendado')
 
@@ -46,21 +30,6 @@ function agendar() {
             document.querySelector('#barba').value = '';
             document.querySelector('#cabelo').value = '';
             document.querySelector('.digite').value = '';
-        }, 5000);
+        }, 8000);
     }
 }
-
-const voltarAoTopo = document.querySelector(".voltar-ao-topo");
-window.addEventListener('scroll', function() {
-    var scrollPosition = window.scrollY;
-    var button = document.querySelector('.voltar-ao-topo');
-
-    if (scrollPosition >= 200) {
-        button.classList.add('show');
-    } else {
-        button.classList.remove('show');
-    }
-});
-voltarAoTopo.addEventListener('click', () => {
-    window.scrollTo({top: 0})
-})

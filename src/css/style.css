@@ -235,7 +235,7 @@ header::before {
     height: 100vh;
     padding: 20px;
     
-    background: url(../img/fundo1.jpg);
+    background: url(../img/fundo1.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -336,7 +336,7 @@ header::before {
     height: 38vh;
     background-color: #EFB43A;
     position: relative;
-    bottom: 20px;
+    bottom: 30px;
 }
 
 .btn-agendar {
@@ -711,9 +711,7 @@ footer a {
 } */
 
 .voltar-ao-topo {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
+    
     display: none;
 }
 
@@ -721,26 +719,63 @@ footer a {
     display: block;
 }
 
-#return {
+.voltar-ao-topo {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 50px;
     height: 50px;
     padding: 10px;
+
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
     border-radius: 50%;
     border: none;
     cursor: pointer;
+    font-size: 1.5em;
     font-size: 20px;
     box-shadow: 1px 2px 15px #191919;
     background-color: #111;
-    transition: all .3s ease-in-out;
-    font-size: 1.5em;
     outline: 1px solid #EFB43A;
     outline-offset: -3px;
+    transition: all .3s ease-in-out;
 }
 
-#return:hover {
+.hidden {
+    visibility: hidden;
+    animation: sumir .3s ease-in-out;
+    opacity: 0;
+}
+
+@keyframes sumir {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+}
+
+.voltar-ao-topo:not(.hidden) {
+    animation: aparecer .3s ease-in-out;
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.voltar-ao-topo:hover {
     color: #111;
     outline: 1px solid #111;
     background-color: #EFB43A;
